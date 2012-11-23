@@ -10,7 +10,7 @@ use DBIx::TransactionManager;
 
 =head1 NAME
 
-Mojolicious::Plugin::DBIxTransactionManager - The great new Mojolicious::Plugin::DBIxTransactionManager!
+Mojolicious::Plugin::DBIxTransactionManager - DBIx::TransactionManager for Mojolicious's plugin
 
 =head1 VERSION
 
