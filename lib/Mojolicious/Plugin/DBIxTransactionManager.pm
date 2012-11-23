@@ -10,7 +10,7 @@ use DBIx::TransactionManager;
 
 =head1 NAME
 
-Mojolicious::Plugin::DBIxTransactionManager - The great new Mojolicious::Plugin::DBIxTransactionManager!
+Mojolicious::Plugin::DBIxTransactionManager - DBIx::TransactionManager for Mojolicious's plugin
 
 =head1 VERSION
 
@@ -29,14 +29,14 @@ Perhaps a little code snippet.
 
     $self->plugin( DBIxTransactionManager => { dbh => $dbh } );
     {
-        my $tm1 = $self->app->tm->txn_scope;
+        my $txn1 = $self->app->tm->txn_scope;
         {
-            my $tm2 = $self->app->tm->txn_scope;
+            my $txn2 = $self->app->tm->txn_scope;
             ... ACTION ...
-            $tm2->commit;
+            $txn2->commit;
         }
         ... ACTION ...
-        $tm1->commit;
+        $txn1->commit;
     }
 
 =head1 SUBROUTINES/METHODS
